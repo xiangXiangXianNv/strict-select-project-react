@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta name="theme-color" content="#000000">
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_947993_9nplkttx1dj.css">
+    <title>严选购物-React</title>
+  </head>
+  <body>
+    <noscript>
+    </noscript>
+    <div id="root"></div>
+  </body>
+  <script src="https://as.alipayobjects.com/g/component/fastclick/1.0.6/fastclick.js"></script>
+  <script>
+      if ('addEventListener' in document) {
+          document.addEventListener('DOMContentLoaded', function () {
+              FastClick.attach(document.body);
+          }, false);
+      }
+      if (!window.Promise) {
+          document.writeln('<script src="https://as.alipayobjects.com/g/component/es6-promise/3.2.2/es6-promise.min.js"' +
+              '>' + '<' + '/' + 'script>');
+      }
+  </script>
+  <script>
+      (function (width) {
+          const fontSize = (window.innerWidth || document.documentElement.clientWidth) / width * 100 + "px";
+          document.documentElement.style.fontSize = fontSize;
+          document.body.style.fontSize = "0.24rem";
+      })(750)
+  </script>
+</html>
