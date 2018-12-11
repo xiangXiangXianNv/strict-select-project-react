@@ -5,6 +5,8 @@
   "dependencies": {
     "@babel/core": "7.1.0",
     "@svgr/webpack": "2.4.1",
+    "antd": "^3.11.2",
+    "antd-mobile": "^2.2.6",
     "axios": "^0.18.0",
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "9.0.0",
@@ -68,7 +70,7 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js"
+    "test": "react-app-rewired test --env=jsdom"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -123,10 +125,14 @@
   "babel": {
     "presets": [
       "react-app"
+    ],
+    "plugins": [
+      ["import", { "libraryName": "antd-mobile", "libraryDirectory": "lib"}]
     ]
   },
   "devDependencies": {
+    "babel-plugin-import": "^1.11.0",
+    "react-app-rewired": "^1.6.2",
     "redux-devtools-extension": "^2.13.7"
-  },
-  "proxy": "http://m.you.163.com"
+  }
 }

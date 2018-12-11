@@ -25,7 +25,12 @@ class ShiWu  extends React.Component {
         if(NavList.length>0){
             return (
                 <div className="find">
-                    <ShiWuHeader/>
+                    <ShiWuHeader>
+                        <div className="header-center">
+                            <span className="one">发现</span>
+                            <span>甄选家</span>
+                        </div>
+                    </ShiWuHeader>
                     <div className="nav-wrap">
                         <div className="nav">
                             <ul className="nav-list">

@@ -5,14 +5,17 @@ import {
     reqHomeData,
     reqSortData,
     reqNavList,
-    reqTabList
+    reqTabList,
+    reqLogout
 } from '../api'
 import {
     GETHOMEDATA,
     GETSORTDATA,
     GETNAVLIST,
     GETSHIWUDATA,
-    RESETSHIWUDATA
+    RESETSHIWUDATA,
+    SAVEUSER,
+    RESETUSER
 } from './action-types'
 //同步保存首页数据的action
 const receiveHomeData = (homeData) => {
@@ -29,6 +32,12 @@ const receiveShiWuData = (shiWuData) => {
 };
 export const resetShiWuData = () => {
     return {type:RESETSHIWUDATA,data:{}}
+};
+export const saveUser = (user) => {
+    return {type:SAVEUSER,data:user}
+};
+const resetUser = () => {
+    return {type:RESETUSER}
 };
 //异步请求首页数据的action
 export const getHomeData = ()=>{
@@ -75,4 +84,14 @@ export const resetShiWuDataA = ()=>{
     return  async (dispatch)=>{
       dispatch(resetShiWuData())
     }
+};
+
+//用户登出
+export const logout =  ()=>{
+   return async dispatch => {
+       const result = await reqLogout();
+       if(result.code===0){
+            dispatch(resetUser())
+       }
+   }
 };

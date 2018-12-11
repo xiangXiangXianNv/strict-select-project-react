@@ -6,3 +6,5 @@ export const GETSORTDATA = 'getsortdata';
 export const GETNAVLIST = 'getnavlist';
 export const GETSHIWUDATA = 'getshiwudata';
 export const RESETSHIWUDATA = 'resetshiwudata';
+export const SAVEUSER = 'saveuser';
+export const RESETUSER = 'resetuser';

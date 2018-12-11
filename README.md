@@ -7,10 +7,13 @@
     action
     5. bug : 没有执行action中异步函数return的函数
        原因 : 在组件中直接调用了action函数,而不是从this.props中拿出action函数调用
+### day01
     6.初始化显示必须判断数据是否来了
     7. style中必须使用{{}}
     8.如果{}中再次使用标签,而标签中再需要写js代码必须再次使用{}
-    9.componentWillReceiveProps(最新的props对象)        
+    9.componentWillReceiveProps(最新的props对象)
+### day02
+    10.react中父组件可以通过this.props.children拿到子组件标签内部传递过来的标签,类似于vue中的插槽               
   
   
 ### react与vue区别
