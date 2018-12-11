@@ -1,0 +1,163 @@
+.profile
+  .personalContent
+    background-color #F2F5F4
+    height 12.46rem
+    margin-top 1rem
+    .logoWrap
+      height 7rem
+      .logo
+        height .88rem
+        padding 1.6rem 0
+        text-align center
+        img
+          width 2.66rem
+          height .9rem
+      .btn
+        width 6.7rem
+        padding 0 .4rem
+        height 2.9rem
+        margin-bottom 2.05rem
+        .phoneLogin,.emailLogin
+          background-color #b4282d
+          width 6.66rem
+          height 0.88rem
+          line-height .88rem
+          text-align center
+          margin-bottom .32rem
+          color #fff
+          .iconfont
+            font-size .35rem
+            margin-right .16rem
+            vertical-align middle
+          span
+            font-size .27rem
+        .eLogin
+          border .02rem #b4282d solid
+          background-color #F2F5F4
+          color  #b4282d
+      .register
+        text-align center
+    .thirdWrap
+      width 100%
+      position absolute
+      bottom 0.7rem
+      left 0
+      text-align center
+      display flex
+      justify-content center
+      .item
+        width 1rem
+        height .4rem
+        padding 0 .4rem
+        color #7F7F7F
+        &.wx,&.qq
+          border-right .02rem #7F7F7F solid
+          font-size 0.12rem
+  .login-view
+    .login_content
+      width 90%
+      margin auto
+      .logoWrap
+        height .88rem
+        padding 1.4rem 0
+        text-align center
+        img
+          width 1.9rem
+          height .7rem
+      >form
+        >div
+          display none
+          &.on
+            display block
+          input
+            width 100%
+            height 100%
+            padding-left 10px
+            box-sizing border-box
+            border 1px solid #ddd
+            border-radius 4px
+            outline 0
+            font 400 .24rem Arial
+            &:focus
+              border 1px solid #02a774
+          .login_message
+            position relative
+            margin-top 16px
+            height 1rem
+            font-size 14px
+            background #fff
+            .get_verification
+              position absolute
+              top 50%
+              right 10px
+              transform translateY(-50%)
+              border 0
+              color #ccc
+              font-size 0.26rem
+              background transparent
+              &.switchColor
+                color black
+          .login_verification
+            position relative
+            margin-top 16px
+            height 1rem
+            font-size 14px
+            background #fff
+            .switch_button
+              font-size 0.24rem
+              border 1px solid #ddd
+              border-radius 8px
+              transition background-color .3s,border-color .3s
+              padding 0 6px
+              width 30px
+              height 16px
+              line-height 16px
+              color #fff
+              position absolute
+              top 50%
+              right 10px
+              transform translateY(-50%)
+              &.off
+                background #fff
+                .switch_text
+                  float right
+                  color #ddd
+              &.on
+                background #02a774
+              >.switch_circle
+                position absolute
+                top -1px
+                left -1px
+                width .16rem
+                height .16rem
+                border 1px solid #ddd
+                border-radius 50%
+                background #fff
+                box-shadow 0 2px 4px 0 rgba(0,0,0,.1)
+                transition transform .3s
+                &.on
+                  transform translateX(27px)
+        .login_submit
+          display block
+          width 100%
+          height 1rem
+          margin-top 30px
+          border-radius 4px
+          background rgb(180,40,45)
+          color #fff
+          text-align center
+          font-size .27rem
+          line-height 1rem
+          border 0
+      .other-login
+        display block
+        width 100%
+        height 1rem
+        margin-top .3rem
+        border-radius 4px
+        color rgb(180,40,45)
+        text-align center
+        font-size .27rem
+        line-height 1rem
+        border 1px rgb(180,40,45) solid
+        background-color white

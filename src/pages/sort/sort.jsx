@@ -10,9 +10,13 @@ class Sort extends React.Component {
       currentIndex:0
     };
     componentWillMount(){
+        this._isMounted = true;
         const {getSortData} = this.props;
         getSortData();
     };
+    componentWillUnmount(){
+        this._isMounted = false;
+    }
     componentDidMount(){
         new BScroll('.sort-left',{
             scrollY: true,

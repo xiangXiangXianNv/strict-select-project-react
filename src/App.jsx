@@ -9,8 +9,10 @@ import Profile from './pages/profile/profile'
 import NotFound from './pages/not-found/not-found'
 class App extends React.Component {
     render() {
-        const path = ['/home','/sort','/shiwu','/shopcart'];
-        const currentP = this.props.location.pathname;
+        const path = ['/home','/sort','/shiwu','/shopcart','/shiwu/tab/0','/shiwu/tab/1','/shiwu/tab/2',
+            '/shiwu/tab/3','/shiwu/tab/4'
+        ];
+        const  currentP = this.props.location.pathname;
         const isShowFoot = path.indexOf(currentP)>=0;
         return (
             <div>

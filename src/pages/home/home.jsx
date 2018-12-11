@@ -20,11 +20,11 @@ class Home extends React.Component {
             let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
             if(scrollTop>500){
                 this.setState({
-                    toUpIsShow : true ,
+                    toUpIsShow : true
                 })
             }else{
                 this.setState({
-                    toUpIsShow : false ,
+                    toUpIsShow : false
                 })
             }
         });

@@ -6,7 +6,11 @@
     4. connect连接ui组件时传递给ui组件props时第一个参数是用来读取指定数据的reducer函数返回的值,第二个参数是用来更新状态的
     action
     5. bug : 没有执行action中异步函数return的函数
-       原因 : 在组件中直接调用了action函数,而不是从this.props中拿出action函数调用     
+       原因 : 在组件中直接调用了action函数,而不是从this.props中拿出action函数调用
+    6.初始化显示必须判断数据是否来了
+    7. style中必须使用{{}}
+    8.如果{}中再次使用标签,而标签中再需要写js代码必须再次使用{}
+    9.componentWillReceiveProps(最新的props对象)        
   
   
 ### react与vue区别

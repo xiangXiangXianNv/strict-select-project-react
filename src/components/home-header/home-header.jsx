@@ -72,7 +72,7 @@ class HomeHeader extends React.Component {
                         <div className="all" style={{display:isShowPullDown?'block':'none'}}>
                             <div className="text">全部频道</div>
                         </div>
-                        <div className={isShowPullDown?'pullDown on':'pullDown down'} onClick={()=>{this.handlePullDown()}}>
+                        <div className={isShowPullDown?'pullDown up':'pullDown down'} onClick={()=>{this.handlePullDown()}}>
                             <div className="icon">
 
                             </div>
