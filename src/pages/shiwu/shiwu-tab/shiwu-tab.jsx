@@ -1,7 +1,7 @@
 import React from "react"
 import {connect} from 'react-redux'
 import './shiwu-tab.styl'
-import {getShiWuData,resetShiWuDataA} from '../../../store/actions'
+import {getShiWuData,resetShiWuDataA,goSaveId} from '../../../store/actions'
 class ShiWuTab extends React.Component {
     state = {
       page : 1,
@@ -9,6 +9,7 @@ class ShiWuTab extends React.Component {
     };
     componentWillMount(){
         const index = this.props.match.params.id;
+        this.props.goSaveId(index);
         const id = this.props.NavList[index].tabId;
         const url = '/topic/v1/find/recAuto.json';
         const url2 = '/topic/v1/find/getTabData.json';
@@ -19,6 +20,7 @@ class ShiWuTab extends React.Component {
         }else if(index==="1"){
             getShiWuData({index: id,url:url2,page})
         }
+        console.log(this.dispatch)
     };
     content =(rec) =>{
         const {ShiWuData} = this.props;
@@ -31,8 +33,9 @@ class ShiWuTab extends React.Component {
     componentWillReceiveProps(props){
         const id = this.props.match.params.id;
         if(id!==props.match.params.id){
-            this.props.resetShiWuDataA();
+           this.props.resetShiWuDataA();
            const index = props.match.params.id;
+           this.props.goSaveId(index);
            const page = this.state.page;
            const {getShiWuData} = this.props;
            const url = '/topic/v1/find/recAuto.json';
@@ -123,5 +126,5 @@ export default connect(
             ShiWuData : state.ShiWuData,
         }
     },
-    {getShiWuData,resetShiWuDataA}
+    {getShiWuData,resetShiWuDataA,goSaveId}
 )(ShiWuTab)

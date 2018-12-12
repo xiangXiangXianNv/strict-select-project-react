@@ -15,7 +15,8 @@ import {
     GETSHIWUDATA,
     RESETSHIWUDATA,
     SAVEUSER,
-    RESETUSER
+    RESETUSER,
+    SAVEID
 } from './action-types'
 //同步保存首页数据的action
 const receiveHomeData = (homeData) => {
@@ -38,6 +39,10 @@ export const saveUser = (user) => {
 };
 const resetUser = () => {
     return {type:RESETUSER}
+};
+//存储识物组件的id值
+const saveId = (id) => {
+    return {type:SAVEID,data:id}
 };
 //异步请求首页数据的action
 export const getHomeData = ()=>{
@@ -94,4 +99,9 @@ export const logout =  ()=>{
             dispatch(resetUser())
        }
    }
+};
+export const goSaveId =  (id)=>{
+    return  async (dispatch)=>{
+        dispatch(saveId(id))
+    }
 };

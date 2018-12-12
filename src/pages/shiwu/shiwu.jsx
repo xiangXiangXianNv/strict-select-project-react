@@ -7,17 +7,21 @@ import ShiWuTab from './shiwu-tab/shiwu-tab'
 import './shiwu.styl'
 class ShiWu  extends React.Component {
     state = {
-        currentIndex:0
+        currentIndex : undefined
     };
     componentWillMount(){
         const {getNavList} = this.props;
         getNavList();
+        setTimeout(()=>{
+            this.setState({
+                currentIndex : this.props.Id
+            });
+        },1000)
     };
     handleCurrentIndex = (index)=>{
       this.setState({
           currentIndex:index
       });
-
     };
     render() {
         const {NavList} = this.props;
@@ -37,7 +41,7 @@ class ShiWu  extends React.Component {
                                 {
                                     NavList.map((item,index)=>{
                                         return (
-                                            <li className={index===currentIndex?'nav-item router-link-exact-active':'nav-item'}
+                                            <li className={index==currentIndex?'nav-item router-link-exact-active':'nav-item'}
                                                 key={index}
                                                 onClick={()=>{this.handleCurrentIndex(index)}}
                                             >
@@ -52,7 +56,7 @@ class ShiWu  extends React.Component {
                     <div className="view">
                         <Switch>
                             <Redirect exact from='/shiwu' to='/shiwu/tab/0'/>
-                            <Route path='/shiwu/tab/:id' component={ShiWuTab}/>
+                            <Route path='/shiwu/tab/:id' component={ShiWuTab} />
                         </Switch>
                     </div>
                 </div>
@@ -65,7 +69,8 @@ class ShiWu  extends React.Component {
 export default connect(
     state => {
         return {
-            NavList : state.NavList
+            NavList : state.NavList,
+            Id : state.Id
         }
     },
     {getNavList}

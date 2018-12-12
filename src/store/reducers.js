@@ -7,7 +7,8 @@ import {
     GETSHIWUDATA,
     RESETSHIWUDATA,
     SAVEUSER,
-    RESETUSER
+    RESETUSER,
+    SAVEID
 } from './action-types'
 const initHomeData = {
 
@@ -51,7 +52,7 @@ function ShiWuData(state=initShiWuData,action) {
 }
 const initUser = {};
 function User(state=initUser,action) {
-   switch (action.type){
+   switch(action.type){
        case SAVEUSER :
            return action.data;
        case RESETUSER :
@@ -60,7 +61,15 @@ function User(state=initUser,action) {
            return state
    }
 }
-
+const initId = 0;
+function Id(state=initId,action) {
+    switch(action.type){
+        case SAVEID :
+            return action.data;
+        default :
+            return state
+    }
+}
 
 
 export default combineReducers({
@@ -68,5 +77,6 @@ export default combineReducers({
     sortData,
     NavList,
     ShiWuData,
-    User
+    User,
+    Id
 });
