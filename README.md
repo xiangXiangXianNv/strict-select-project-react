@@ -13,9 +13,8 @@
     8.如果{}中再次使用标签,而标签中再需要写js代码必须再次使用{}
     9.componentWillReceiveProps(最新的props对象)
 ### day02
-    10.react中父组件可以通过this.props.children拿到子组件标签内部传递过来的标签,类似于vue中的插槽         11.react中的事件不能使用return false来阻止事件的默认行为,必须使用event.preventDefault()
-
-### react与vue区别
+    10.react中父组件可以通过this.props.children拿到子组件标签内部传递过来的标签,类似于vue中的插槽
+    11.react中的事件不能使用return false来阻止事件的默认行为,必须使用event.preventDefault()
 ### react与vue区别
     1. react中引入就确定了标签名,vue中引入之后必须注册一把来确定标签名
     2. react中显示的路由界面使用switch来确定显示某一个,vue中显示的路由界面标签 router-view
